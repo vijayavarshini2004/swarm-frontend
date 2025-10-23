@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Bar, Doughnut } from 'react-chartjs-2';
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  ArcElement,
+    ArcElement,
+    BarElement,
+    CategoryScale,
+    Chart as ChartJS,
+    Legend,
+    LinearScale,
+    Title,
+    Tooltip,
 } from 'chart.js';
+import { useEffect, useState } from 'react';
+import { Bar, Doughnut } from 'react-chartjs-2';
+import { useNavigate } from 'react-router-dom';
 
 ChartJS.register(
   CategoryScale,
@@ -34,7 +34,7 @@ export default function Dashboard() {
 
   const fetchDashboardData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/admin/get_detailed_results');
+      const response = await fetch('https://swarm-backend-nf9e.onrender.com/admin/get_detailed_results');
       const data = await response.json();
       
       if (data.success) {

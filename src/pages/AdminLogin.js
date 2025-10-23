@@ -13,7 +13,7 @@ export default function AdminLogin() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/admin/login', {
+      const response = await fetch('https://swarm-backend-nf9e.onrender.com/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials)
