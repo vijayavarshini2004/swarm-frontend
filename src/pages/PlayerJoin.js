@@ -15,7 +15,7 @@ export default function PlayerJoin() {
     setError('');
 
     try {
-      const response = await fetch('https://swarm-backend-1.onrender.com/', {
+      const response = await fetch('https://swarm-backend-1.onrender.com/join_game', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -76,7 +76,7 @@ export default function PlayerJoin() {
               required
             />
             <p className="text-xs text-slate-400 mt-1">
-              Valid roll numbers: 211-269 or 431-436
+              Valid roll numbers: 201-269 or 431-436
             </p>
           </div>
 
