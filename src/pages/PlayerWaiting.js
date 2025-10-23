@@ -22,7 +22,7 @@ export default function PlayerWaiting() {
 
     const checkGameStatus = async () => {
       try {
-        const response = await fetch('https://swarm-backend-nf9e.onrender.com/get_game_status');
+        const response = await fetch('https://swarm-backend-1.onrender.com/get_game_status');
         const data = await response.json();
         setGameStatus(data);
 

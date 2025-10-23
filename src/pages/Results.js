@@ -47,12 +47,12 @@ export default function Results() {
 
   const fetchResults = async () => {
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/get_swarm_results');
+      const response = await fetch('https://swarm-backend-1.onrender.com/get_swarm_results');
       const data = await response.json();
       
       if (data.success) {
         // Get current game info for the image
-        const gameStatusResponse = await fetch('https://swarm-backend-nf9e.onrender.com/get_game_status');
+        const gameStatusResponse = await fetch('https://swarm-backend-1.onrender.com/get_game_status');
         const gameStatus = await gameStatusResponse.json();
         
         data.current_game = gameStatus.current_game;
@@ -230,7 +230,7 @@ export default function Results() {
           <h2 className="text-xl font-semibold mb-4">The Clear Image</h2>
           <div className="text-center">
             <img 
-              src={`https://swarm-backend-nf9e.onrender.com/uploads/${results.current_game?.image}`} 
+              src={`https://swarm-backend-1.onrender.com/uploads/${results.current_game?.image}`} 
               alt="Clear image" 
               className="mx-auto max-w-full h-64 object-cover rounded-lg"
             />

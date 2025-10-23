@@ -23,7 +23,7 @@ export default function AdminDashboard() {
 
   const fetchGameStatus = async () => {
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/get_game_status');
+      const response = await fetch('https://swarm-backend-1.onrender.com/get_game_status');
       const data = await response.json();
       setGameStatus(data);
     } catch (err) {
@@ -58,7 +58,7 @@ export default function AdminDashboard() {
     setError('');
 
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/admin/create_game', {
+      const response = await fetch('https://swarm-backend-1.onrender.com/admin/create_game', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -85,7 +85,7 @@ export default function AdminDashboard() {
   const startGame = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/start_game', {
+      const response = await fetch('https://swarm-backend-1.onrender.com/start_game', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
       });
@@ -105,7 +105,7 @@ export default function AdminDashboard() {
   const endGame = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/end_game', {
+      const response = await fetch('https://swarm-backend-1.onrender.com/end_game', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
       });
@@ -125,7 +125,7 @@ export default function AdminDashboard() {
   const revealAnswer = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/reveal_answer', {
+      const response = await fetch('https://swarm-backend-1.onrender.com/reveal_answer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
       });
@@ -147,7 +147,7 @@ export default function AdminDashboard() {
   const resetGame = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/reset_game', {
+      const response = await fetch('https://swarm-backend-1.onrender.com/reset_game', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
       });
@@ -331,7 +331,7 @@ export default function AdminDashboard() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <img 
-                  src={`https://swarm-backend-nf9e.onrender.com/uploads/${gameStatus.current_game.image}`} 
+                  src={`https://swarm-backend-1.onrender.com/uploads/${gameStatus.current_game.image}`} 
                   alt="Game image" 
                   className="w-full h-48 object-cover rounded-lg filter blur-md"
                 />

@@ -45,7 +45,7 @@ export default function PlayerGame() {
 
   const fetchGameData = async () => {
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/get_game_status');
+      const response = await fetch('https://swarm-backend-1.onrender.com/get_game_status');
       const data = await response.json();
       
       if (!data.game_active && !data.game_ended) {
@@ -74,7 +74,7 @@ export default function PlayerGame() {
     setSuccess('');
 
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/submit_guess', {
+      const response = await fetch('https://swarm-backend-1.onrender.com/submit_guess', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -152,7 +152,7 @@ export default function PlayerGame() {
           <h2 className="text-xl font-semibold mb-4">Identify the Image</h2>
           <div className="text-center">
             <img 
-              src={`https://swarm-backend-nf9e.onrender.com/uploads/${gameData.image}`} 
+              src={`https://swarm-backend-1.onrender.com/uploads/${gameData.image}`} 
               alt="Game image" 
               className="mx-auto max-w-full h-64 object-cover rounded-lg"
             />

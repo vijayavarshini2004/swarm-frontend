@@ -34,7 +34,7 @@ export default function Dashboard() {
 
   const fetchDashboardData = async () => {
     try {
-      const response = await fetch('https://swarm-backend-nf9e.onrender.com/admin/get_detailed_results');
+      const response = await fetch('https://swarm-backend-1.onrender.com/admin/get_detailed_results');
       const data = await response.json();
       
       if (data.success) {
